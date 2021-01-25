@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 25px;
+            margin:5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="bd">Hello bangladesh</h1>
+    <section>
+        <h3>Expolor Javascripet dom</h3>
+        <article id="spaseal">
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat fugit incidunt, minima fuga, iusto, reiciendis corrupti possimus quam nisi est eveniet! Corrupti modi architecto iste quia ipsam doloribus cumque quis!</p>
+        </article>
+        <article class="spsial">
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Voluptas obcaecati rerum ducimus quas quaerat facilis possimus, iure ab porro sit dolore alias, excepturi ipsum provident laudantium quasi praesentium itaque libero nobis, doloremque aliquam accusamus non adipisci nemo. Labore.</p>
+        </article>
+        <article>
+            <h3>article-3</h3>
+            <p class="author">author-3</p>
+            <p class="description">Saepe alias error illum distinctio, corrupti, vitae eligendi eos sint itaque ut molestias, sunt odit illo accusamus iusto culpa vel qui placeat! Sequi, totam obcaecati! Dignissimos inventore modi a eveniet?</p>
+        </article>
+    </section>
+
+    <script>
+        document.body.style.backgroundColor = 'tomato';
+       var authors = document.querySelectorAll('.spsial h3');
+       for (let i = 0; i < authors.length; i++) {
+           const element = authors[i];
+           element.style.backgroundColor = 'lightblue';
+           element.style.margin = '10px';
+           element.innerHTML = 'lakhok-' + (i+1);
+           
+       }
+       var spsialClass = document.getElementById('spaseal');
+       var newParagarap = document.createElement('p');
+       newParagarap.innerHTML = 'hello bangladash';
+       spsialClass.appendChild(newParagarap);
+      
+    </script>
+</body>
+</html>
